@@ -1,0 +1,161 @@
+/* === ALL @import MUST BE FIRST === */
+@import "tailwindcss";
+
+/* === CUSTOM THEME VARIABLES === */
+@layer base {
+  :root {
+    /* Font Families */
+    --font-family-palanquin: 'Palanquin', sans-serif;
+    --font-family-montserrat: 'Montserrat', sans-serif;
+
+    /* Font Sizes + Line Heights */
+    --font-size-xs: 12px;
+    --line-height-xs: 16px;
+    --font-size-sm: 14px;
+    --line-height-sm: 20px;
+    --font-size-base: 16px;
+    --line-height-base: 19.5px;
+    --font-size-lg: 18px;
+    --line-height-lg: 21.94px;
+    --font-size-xl: 20px;
+    --line-height-xl: 24.38px;
+    --font-size-2xl: 24px;
+    --line-height-2xl: 29.26px;
+    --font-size-3xl: 28px;
+    --line-height-3xl: 50px;
+    --font-size-4xl: 48px;
+    --line-height-4xl: 58px;
+    --font-size-8xl: 96px;
+    --line-height-8xl: 106px;
+
+    /* Colors */
+    --color-primary: #ECEEFF;
+    --color-coral-red: #FF6452;
+    --color-slate-gray: #6D6D6D;
+    --color-pale-blue: #F5F6FF;
+    --color-white-400: rgba(255, 255, 255, 0.80);
+
+    /* Box Shadows */
+    --box-shadow-3xl: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+    /* Background Images */
+    --background-image-hero: url('assets/images/collection-background.svg');
+    --background-image-card: url('assets/images/thumbnail-background.svg');
+
+    /* Custom Breakpoints */
+    --breakpoint-wide: 1440px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+}
+
+/* === COMPONENTS === */
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .input {
+    display: flex;
+    flex: 1;
+    font-size: var(--font-size-base);
+    line-height: normal;
+    padding-left: 1.25rem;
+    padding: 1.25rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid #94a3b8;
+    border-radius: 9999px;
+    color: #94a3b8;
+  }
+}
+
+/* === UTILITIES === */
+@layer utilities {
+  .padding {
+    padding: 6rem 4rem;
+  }
+
+  .padding-x {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .padding-y {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .padding-l {
+    padding-left: 4rem;
+  }
+
+  .padding-r {
+    padding-right: 4rem;
+  }
+
+  .padding-t {
+    padding-top: 6rem;
+  }
+
+  .padding-b {
+    padding-bottom: 6rem;
+  }
+
+  .info-text {
+    font-family: var(--font-family-montserrat);
+    color: #94a3b8;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  @layer utilities {
+    /* === Colors === */
+    .text-primary         { color: var(--color-primary); }
+    .text-coral-red       { color: var(--color-coral-red); }
+    .text-slate-gray      { color: var(--color-slate-gray); }
+    .text-pale-blue       { color: var(--color-pale-blue); }
+    .text-white-400       { color: var(--color-white-400); }
+  
+    .bg-primary           { background-color: var(--color-primary); }
+    .bg-coral-red         { background-color: var(--color-coral-red); }
+    .bg-slate-gray        { background-color: var(--color-slate-gray); }
+    .bg-pale-blue         { background-color: var(--color-pale-blue); }
+    .bg-white-400         { background-color: var(--color-white-400); }
+  
+    .border-primary       { border-color: var(--color-primary); }
+    .border-coral-red     { border-color: var(--color-coral-red); }
+    .border-slate-gray    { border-color: var(--color-slate-gray); }
+    .border-pale-blue     { border-color: var(--color-pale-blue); }
+    .border-white-400     { border-color: var(--color-white-400); }
+  
+    /* === Font Families === */
+    .font-palanquin       { font-family: var(--font-family-palanquin); }
+    .font-montserrat      { font-family: var(--font-family-montserrat); }
+  
+    /* === Font Sizes + Line Heights === */
+    .text-xs    { font-size: var(--font-size-xs); line-height: var(--line-height-xs); }
+    .text-sm    { font-size: var(--font-size-sm); line-height: var(--line-height-sm); }
+    .text-base  { font-size: var(--font-size-base); line-height: var(--line-height-base); }
+    .text-lg    { font-size: var(--font-size-lg); line-height: var(--line-height-lg); }
+    .text-xl    { font-size: var(--font-size-xl); line-height: var(--line-height-xl); }
+    .text-2xl   { font-size: var(--font-size-2xl); line-height: var(--line-height-2xl); }
+    .text-3xl   { font-size: var(--font-size-3xl); line-height: var(--line-height-3xl); }
+    .text-4xl   { font-size: var(--font-size-4xl); line-height: var(--line-height-4xl); }
+    .text-8xl   { font-size: var(--font-size-8xl); line-height: var(--line-height-8xl); }
+  
+    /* === Shadows === */
+    .shadow-3xl { box-shadow: var(--box-shadow-3xl); }
+  
+    /* === Background Images === */
+    .bg-hero    { background-image: var(--background-image-hero); }
+    .bg-card    { background-image: var(--background-image-card); }
+  }
+  
+}
