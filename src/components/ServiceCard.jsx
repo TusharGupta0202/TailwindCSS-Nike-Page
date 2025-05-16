@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const ServiceCard = ({imgURL,label,subtext}) => {
   return (
